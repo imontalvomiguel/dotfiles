@@ -6,14 +6,16 @@ let mapleader = ","
 
 " Integrating with powerline fonts
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
 
 " vim-indent-guides
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:indent_guides_start_level = 2
 
+" Setting up the directories
+set backup
 if has('persistent_undo')
   set undofile                " So is persistent undo ...
   set undolevels=1000         " Maximum number of changes that can be undone
@@ -22,6 +24,3 @@ endif
 
 " Cool json
 let g:vim_json_syntax_conceal = 0
-
-" Custom indentation
-"autocmd Filetype php setlocal ts=4 sts=4 sw=4

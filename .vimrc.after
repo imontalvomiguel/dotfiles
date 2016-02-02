@@ -4,10 +4,6 @@ set background=dark
 " Load a colorscheme"
 color smyck
 
-" Airlinetheme
-au VimEnter * AirlineTheme powerlineish
-" let g:airline_theme="powerlineish"
-
 " Backup and swap files
 set undodir=~/.vimundo/     " set unfo file location
 
