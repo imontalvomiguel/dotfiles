@@ -1,26 +1,10 @@
-" The encoding displayed
-set encoding=utf-8
-
 " The default leader is '\\', but many people prefer ',' as it's in a standard
 let mapleader = ","
 
 " Integrating with powerline fonts
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
 
 " vim-indent-guides
-let g:indent_guides_auto_colors = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
-
-" Setting up the directories
-set backup
-if has('persistent_undo')
-  set undofile                " So is persistent undo ...
-  set undolevels=1000         " Maximum number of changes that can be undone
-  set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
-endif
-
-" Cool json
-let g:vim_json_syntax_conceal = 0
