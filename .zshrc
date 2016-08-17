@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="daveverwer"
+ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,7 +45,7 @@ ZSH_THEME="daveverwer"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sublime)
+plugins=(git sublime rails ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,11 +67,11 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Setting your PATH so that /usr/local/bin occurs before /usr/bin.
+export PATH="/usr/local/bin:$PATH"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-#vim version
-export PATH=/usr/local/Cellar/vim/7.4.712/bin:$PATH
-
-#php version
-export PATH=/Applications/MAMP/bin/php/php5.6.2/bin:$PATH
+# rbenv
+# use this until rbenv plugin is in better shape
+# see https://github.com/robbyrussell/oh-my-zsh/pull/1118
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - )"
