@@ -1,22 +1,25 @@
 " Assume a dark background
 set background=dark
 
-" Load a colorscheme"
+" Load a colorscheme
 color smyck
 
-"Show command in bottom right portion of the screen
+" Show partial commands in status line and
 set showcmd
 
-" highlight current line
+" Jump between matching keywords
+runtime macros/matchit.vim
+
+" Highlight current line
 set cursorline
 
 " Airline theme
 au VimEnter * AirlineTheme powerlineish
 
-" Cool json
+" Better json
 let g:vim_json_syntax_conceal = 0
 
-" Persistent
+" Backups are nice
 if has('persistent_undo')
   set undofile                " So is persistent undo ...
   set undolevels=1000         " Maximum number of changes that can be undone
