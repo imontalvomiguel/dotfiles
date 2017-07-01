@@ -1,11 +1,22 @@
 # Mis dotfiles
-Estos son los settings que uso en MacOSX
+Estos son los settings que yo uso en macOS:
 
 ## Terminal
-Uso la terminal normalita de MaxOSX con [Smyck-Color-Scheme](https://github.com/hukl/Smyck-Color-Scheme) y [Oh My ZSH!](https://github.com/robbyrussell/oh-my-zsh)
+* [iTerm2](https://www.iterm2.com)
+* [Smyck-Color-Scheme](https://github.com/hukl/Smyck-Color-Scheme)
+* [Oh My ZSH!](https://github.com/robbyrussell/oh-my-zsh)
 
 ## VIM settings
+* VIM 7.4
+* GVIM (MacVIM) 7.4
 * [Janus: Vim Distribution](https://github.com/carlhuda/janus)
-* VIM @terminal 7.3 normalito de MacOSX con [Smyck-VIM](https://github.com/hukl/Smyck-Color-Scheme/blob/master/smyck.vim) colorscheme
-* GVIM (MacVIM) 7.4.258 con [Wombat256mod](https://github.com/michalbachowski/vim-wombat256mod) colorscheme
+* [Smyck-VIM](https://github.com/montalvomiguelo/vim-smyck-theme) colorscheme
 
+## Plugins
+* [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim.git)
+* [emmet-vim](https://github.com/mattn/emmet-vim.git)
+* [vim-airline](https://github.com/vim-airline/vim-airline.git)
+* [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
+* [vim-autoclose](https://github.com/spf13/vim-autoclose.git)
+* [vim-indent-guides](git://github.com/nathanaelkane/vim-indent-guides.git)
+* [vim-smyck-theme](https://github.com/montalvomiguelo/vim-smyck-theme.git)
