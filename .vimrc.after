@@ -26,3 +26,12 @@ if has('persistent_undo')
   set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
   set undodir=~/.vimundo/     " set unfo file location
 endif
+
+" Custom ignore for ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|dist',
+  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+  \ }
+
+" Enable JSX syntax in .js files
+let g:jsx_ext_required = 0
