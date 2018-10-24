@@ -29,9 +29,15 @@ endif
 
 " Custom ignore for ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|dist',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|dist|build',
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
 
 " Enable JSX syntax in .js files
 let g:jsx_ext_required = 0
+
+" Enable syntax highlighting for JSDocs
+let g:javascript_plugin_jsdoc = 1
+
+" Disable safe write feature
+set backupcopy=yes
