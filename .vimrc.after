@@ -19,17 +19,18 @@ au VimEnter * AirlineTheme powerlineish
 " Better json
 let g:vim_json_syntax_conceal = 0
 
-" Backups are nice
+" Setting up the directories
+set undodir=~/.vimundo/     " Set undo file location
+
 if has('persistent_undo')
   set undofile                " So is persistent undo ...
   set undolevels=1000         " Maximum number of changes that can be undone
   set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
-  set undodir=~/.vimundo/     " set unfo file location
 endif
 
 " Custom ignore for ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|dist|build',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules|dist',
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
 
@@ -41,3 +42,9 @@ let g:javascript_plugin_jsdoc = 1
 
 " Disable safe write feature
 set backupcopy=yes
+
+" NERDTree
+map <leader>e :NERDTreeFind<CR>
+
+" YCM
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
