@@ -48,3 +48,7 @@ map <leader>e :NERDTreeFind<CR>
 
 " YCM
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" remap SnipMate for compatibility for YCM
+:imap <C-J> <Plug>snipMateNextOrTrigger
+:smap <C-J> <Plug>snipMateNextOrTrigger
