@@ -13,14 +13,13 @@ Estos son los settings que yo uso en macOS:
 
 ## Plugins
 * [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+* [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim.git)
 * [emmet-vim](https://github.com/mattn/emmet-vim.git)
 * [tlib_vim](https://github.com/tomtom/tlib_vim)
 * [vim-airline](https://github.com/vim-airline/vim-airline.git)
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
-* [vim-autoclose](https://github.com/spf13/vim-autoclose.git)
 * [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 * [vim-javascript](https://github.com/pangloss/vim-javascript)
-* [vim-jsx](https://github.com/mxw/vim-jsx/tree/5b968dfa512c57c38ad7fe420f3e8ab75a73949a)
 * [vim-smyck-theme](https://github.com/montalvomiguelo/vim-smyck-theme.git)
 * [vim-snippets](https://github.com/honza/vim-snippets)
