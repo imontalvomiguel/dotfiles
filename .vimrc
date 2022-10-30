@@ -30,13 +30,11 @@ if has('statusline')
 endif
 
 " Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+set signcolumn=yes
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 
 ""
 "" Whitespace
@@ -106,7 +104,6 @@ call minpac#add('honza/vim-snippets')
 call minpac#add('mileszs/ack.vim')
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 call minpac#add('jiangmiao/auto-pairs')
-call minpac#add('sheerun/vim-polyglot')
 call minpac#add('mattn/emmet-vim')
 call minpac#add('dracula/vim')
 call minpac#add('vim-airline/vim-airline')
@@ -114,7 +111,19 @@ call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('ap/vim-css-color')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('prettier/vim-prettier')
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('thinca/vim-visualstar')
+call minpac#add('Vimjas/vim-python-pep8-indent')
+call minpac#add('vim-ruby/vim-ruby')
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('HerringtonDarkholme/yats.vim')
+call minpac#add('posva/vim-vue')
+call minpac#add('MaxMEllon/vim-jsx-pretty')
+call minpac#add('elzr/vim-json')
+call minpac#add('jparise/vim-graphql')
+call minpac#add('keith/rspec.vim')
+call minpac#add('chrisbra/csv.vim')
+call minpac#add('fatih/vim-go', {'do': 'GoUpdateBinaries'})
+call minpac#add('k-takata/minpac', {'type':'opt'})
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -124,7 +133,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
@@ -175,65 +183,7 @@ nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <Leader>f :Ack!<Space>
 
 " COC
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
-
-" Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
