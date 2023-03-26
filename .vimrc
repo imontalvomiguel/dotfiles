@@ -181,6 +181,10 @@ colorscheme dracula
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
+" Prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.liquid,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
+
 " COC
 
 " Use tab for trigger completion with characters ahead and navigate.
