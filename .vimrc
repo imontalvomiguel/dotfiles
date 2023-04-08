@@ -177,21 +177,17 @@ let g:snipMate = { 'snippet_version' : 1 }
 let g:dracula_italic = 0
 colorscheme dracula
 
-" ACK
-cnoreabbrev Ack Ack!
-nnoremap <Leader>g :Ack!<Space>
-
 " Copilot
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-let g:copilot_no_tab_map = v:true
 
 " COC
 " Use tab for trigger completion with characters ahead and navigate.
+let g:copilot_no_tab_map = v:true
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ exists('b:_copilot.suggestions') ? copilot#Accept("\<CR>") :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
