@@ -179,7 +179,7 @@ colorscheme dracula
 
 " ACK
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>g :Ack!<Space>
 
 " Copilot
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
