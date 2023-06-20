@@ -122,7 +122,6 @@ call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('ap/vim-css-color')
 call minpac#add('editorconfig/editorconfig-vim')
-call minpac#add('prettier/vim-prettier', {'branch': 'release/0.x'})
 call minpac#add('thinca/vim-visualstar')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('pangloss/vim-javascript')
@@ -133,7 +132,6 @@ call minpac#add('elzr/vim-json')
 call minpac#add('jparise/vim-graphql')
 call minpac#add('keith/rspec.vim')
 call minpac#add('chrisbra/csv.vim')
-call minpac#add('fatih/vim-go', {'do': 'GoUpdateBinaries'})
 call minpac#add('github/copilot.vim')
 call minpac#add('k-takata/minpac', {'type':'opt'})
 
@@ -182,8 +180,11 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 " Copilot
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+
+" Setup Prettier command
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " COC
 " Use tab for trigger completion with characters ahead and navigate.
