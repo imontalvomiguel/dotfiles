@@ -10,5 +10,20 @@
     "typescriptreact",
     "yaml",
     "liquid"
-  ]
+  ],
+  "prettier.documentSelectors": ["**/*.liquid"],
+  "languageserver": {
+    "liquid": {
+      "command": "theme-check-language-server",
+      "filetypes": ["liquid"],
+      "settings": {
+        "themeCheck": {
+          "checkOnOpen": true,
+          "checkOnChange": true,
+          "checkOnSave": true
+        }
+      },
+      "rootPatterns": [".theme-check.yml"]
+    }
+  }
 }
