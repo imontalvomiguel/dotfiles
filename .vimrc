@@ -183,8 +183,6 @@ nnoremap <Leader>a :Ack!<Space>
 imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
-" Setup Prettier command
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " COC
 " Use tab for trigger completion with characters ahead and navigate.
@@ -283,6 +281,9 @@ endif
 " Requires 'textDocument/selectionRange' support of language server.
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" Setup Prettier command
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
