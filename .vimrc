@@ -89,6 +89,9 @@ let mapleader = ','
 noremap j gj
 noremap k gk
 
+" Clear search
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 ""
 "" Plugins
 ""
@@ -185,9 +188,6 @@ endif
 " Copilot
 imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
-
-" Clear search
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " COC
 " Use tab for trigger completion with characters ahead and navigate
