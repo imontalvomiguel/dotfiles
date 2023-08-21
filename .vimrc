@@ -120,22 +120,17 @@ call minpac#add('mileszs/ack.vim')
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('mattn/emmet-vim')
-call minpac#add('dracula/vim')
-call minpac#add('vim-airline/vim-airline')
-call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('ap/vim-css-color')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('thinca/vim-visualstar')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('HerringtonDarkholme/yats.vim')
-call minpac#add('posva/vim-vue')
 call minpac#add('MaxMEllon/vim-jsx-pretty')
 call minpac#add('elzr/vim-json')
 call minpac#add('jparise/vim-graphql')
-call minpac#add('keith/rspec.vim')
-call minpac#add('chrisbra/csv.vim')
 call minpac#add('github/copilot.vim')
+call minpac#add('lifepillar/vim-colortemplate')
 call minpac#add('k-takata/minpac', {'type':'opt'})
 
 command! PackUpdate call minpac#update()
@@ -175,8 +170,11 @@ let g:vim_json_syntax_conceal = 0
 let g:snipMate = { 'snippet_version' : 1 }
 
 " Dracula
-let g:dracula_italic = 0
-colorscheme dracula
+" let g:dracula_italic = 0
+colorscheme tokyonight256_moon
+if (has('termguicolors'))
+  set termguicolors
+endif
 
 " ACK
 cnoreabbrev Ack Ack!
