@@ -152,9 +152,16 @@ nnoremap <silent> <leader>gc :Git commit<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 
 " CtrlP
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+if executable('rg')
+  " Use rg over Grep
+  set grepprg=rg\ --vimgrep
+  " Use rg in CtrlP for listing files.
+  let g:ctrlp_user_command = 'rg %s --files'
+  " rg is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+else
+  let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+endif
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
@@ -312,11 +319,6 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 
 " Setup Prettier command
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
-" Add (Neo)Vim's native statusline support
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics
