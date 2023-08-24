@@ -5,6 +5,7 @@
 set nocompatible                    " Must be first line
 set relativenumber number           " Line numbers on
 set ruler                           " Show the ruler
+set laststatus=2                    " Always show the status line
 set showmode                        " Display the current mode
 set showcmd                         " Show partial commands in status line and
 set cursorline                      " Highlight current line
@@ -16,17 +17,6 @@ set shortmess+=c                    " Don't give ins-completion-menu messages
 " Neovim disallow changing 'enconding' option after initialization
 if !has('nvim')
   set encoding=utf-8                " Set default encoding to UTF-8
-endif
-
-if has('statusline')
-  set laststatus=2                  " Always show the status bar
-
-  " Start the status line
-  set statusline=%f\ %m\ %r
-  set statusline+=Line:%l/%L[%p%%]
-  set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
 endif
 
 " Always show the signcolumn, otherwise it would shift the text each time
