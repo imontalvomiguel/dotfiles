@@ -28,7 +28,7 @@ set updatetime=300
 
 ""
 "" Whitespace
-"""
+""
 
 set nowrap                          " Do not wrap long lines
 set tabstop=2                       " An indentation every two columns
