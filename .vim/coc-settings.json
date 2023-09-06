@@ -1,16 +1,13 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-    "liquid"
-  ],
+  "[javascript]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "[liquid]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "[css]": {
+    "coc.preferences.formatOnSave": true
+  },
   "prettier.documentSelectors": ["**/*.liquid"],
   "languageserver": {
     "liquid": {
