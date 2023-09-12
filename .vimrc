@@ -60,13 +60,11 @@ set smartcase                       " Case sensitive when uc present
 "" Backup and swap files
 ""
 
-set backupdir^=~/.vim/_backup//     " Where to put backup files
-set directory^=~/.vim/_temp//       " Where to put swap files
-
 " Some servers have issues with backup files, see neoclide/coc.nvim#649.
 set nobackup
 set nowritebackup
-
+set undofile
+set noswapfile
 
 ""
 "" Key (re)Mappings
