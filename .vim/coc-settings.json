@@ -2,6 +2,9 @@
   "[javascript]": {
     "coc.preferences.formatOnSave": true
   },
+  "[typescript]": {
+    "coc.preferences.formatOnSave": true
+  },
   "[liquid]": {
     "coc.preferences.formatOnSave": true
   },
