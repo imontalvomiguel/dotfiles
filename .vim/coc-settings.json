@@ -11,6 +11,9 @@
   "[css]": {
     "coc.preferences.formatOnSave": true
   },
+  "[markdown]": {
+    "coc.preferences.formatOnSave": true
+  },
   "prettier.documentSelectors": ["**/*.liquid"],
   "languageserver": {
     "liquid": {
