@@ -13,6 +13,7 @@ set hidden                          " Allow buffer switching without saving
 filetype plugin indent on           " Automatically detect file types
 syntax on                           " Syntax highlighting
 set shortmess+=c                    " Don't give ins-completion-menu messages
+set wildmenu                        " Show list instead of just completing
 
 " Neovim disallow changing 'enconding' option after initialization
 if !has('nvim')
