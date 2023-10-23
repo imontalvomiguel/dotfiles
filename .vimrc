@@ -123,6 +123,7 @@ call minpac#add('jparise/vim-graphql')
 call minpac#add('github/copilot.vim')
 call minpac#add('lifepillar/vim-colortemplate')
 call minpac#add('k-takata/minpac', {'type':'opt'})
+call minpac#add('puremourning/vimspector')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -167,7 +168,7 @@ let g:vim_json_syntax_conceal = 0
 " SnipMate
 let g:snipMate = { 'snippet_version' : 1 }
 
-" Dracula
+" Color
 " let g:dracula_italic = 0
 colorscheme tokyonight256_moon
 if (has('termguicolors'))
@@ -297,3 +298,18 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+
+" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
+
+nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
+nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
+nmap <LocalLeader>B     <Plug>VimspectorBreakpoints
+nmap <LocalLeader>D     <Plug>VimspectorDisassemble
