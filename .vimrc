@@ -122,8 +122,8 @@ call minpac#add('elzr/vim-json')
 call minpac#add('jparise/vim-graphql')
 call minpac#add('github/copilot.vim')
 call minpac#add('lifepillar/vim-colortemplate')
-call minpac#add('k-takata/minpac', {'type':'opt'})
 call minpac#add('puremourning/vimspector')
+call minpac#add('k-takata/minpac', {'type':'opt'})
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -313,3 +313,7 @@ nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
 nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
 nmap <LocalLeader>B     <Plug>VimspectorBreakpoints
 nmap <LocalLeader>D     <Plug>VimspectorDisassemble
+
+" NERD Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
