@@ -1,5 +1,4 @@
 # dotfiles
 My dotfiles
 
-<img width="1822" alt="Screenshot 2023-10-14 at 1 05 48 PM" src="https://github.com/montalvomiguelo/dotfiles/assets/5134470/85a71db8-cf6d-45e0-b67a-1913ce0a1c78">
-
+<img width="1812" alt="Screenshot 2023-11-05 at 12 49 47 PM" src="https://github.com/montalvomiguelo/dotfiles/assets/5134470/222c7b43-4e34-4636-b467-f8e17bb2bfac">
