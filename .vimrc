@@ -168,7 +168,6 @@ let g:vim_json_syntax_conceal = 0
 let g:snipMate = { 'snippet_version' : 1 }
 
 " Color
-" let g:dracula_italic = 0
 colorscheme tokyonight256_moon
 if (has('termguicolors'))
   set termguicolors
