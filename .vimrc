@@ -85,6 +85,9 @@ noremap k gk
 " Clear search
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
+" Autoformat
+noremap <leader>f :Autoformat<CR>
+
 ""
 "" Plugins
 ""
@@ -109,6 +112,7 @@ call minpac#add('garbas/vim-snipmate')
 call minpac#add('honza/vim-snippets')
 call minpac#add('mileszs/ack.vim')
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+call minpac#add('vim-autoformat/vim-autoformat')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('ap/vim-css-color')
 call minpac#add('editorconfig/editorconfig-vim')
@@ -118,6 +122,7 @@ call minpac#add('pangloss/vim-javascript')
 call minpac#add('HerringtonDarkholme/yats.vim')
 call minpac#add('MaxMEllon/vim-jsx-pretty')
 call minpac#add('elzr/vim-json')
+call minpac#add('bfrg/vim-cpp-modern')
 call minpac#add('github/copilot.vim')
 call minpac#add('puremourning/vimspector')
 call minpac#add('lifepillar/vim-colortemplate', {'type':'opt'})
