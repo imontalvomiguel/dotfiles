@@ -9,7 +9,7 @@
     "coc.preferences.formatOnSave": true
   },
   "[css]": {
-    "coc.preferences.formatOnSave": true
+    "coc.preferences.formatOnSave": false
   },
   "[markdown]": {
     "coc.preferences.formatOnSave": true
@@ -32,6 +32,11 @@
       "command": "opam",
       "args": ["config", "exec", "--", "ocamllsp"],
       "filetypes": ["ocaml", "reason"]
+    },
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     }
   }
 }
