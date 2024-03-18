@@ -125,6 +125,7 @@ call minpac#add('elzr/vim-json')
 call minpac#add('bfrg/vim-cpp-modern')
 call minpac#add('github/copilot.vim')
 call minpac#add('puremourning/vimspector')
+call minpac#add('bfrg/vim-jqplay')
 call minpac#add('lifepillar/vim-colortemplate', {'type':'opt'})
 call minpac#add('k-takata/minpac', {'type':'opt'})
 
