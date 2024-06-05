@@ -131,13 +131,16 @@ call minpac#add('k-takata/minpac', {'type':'opt'})
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
+" Autoformat
+let g:formatters_javascript = ['prettier']
+let g:formatters_typescript = ['prettier']
+let g:formatters_css = ['prettier']
+let g:formatters_liquid = ['prettier']
+let g:formatters_ruby = ['rubocop']
+
 " SnipMate
 :imap <C-J> <Plug>snipMateNextOrTrigger
 :smap <C-J> <Plug>snipMateNextOrTrigger
-
-" NerdTree
-map <leader>e :NERDTreeFind<CR>
-map <leader>n :NERDTreeToggle<CR>
 
 " Fugitive
 nnoremap <silent> <leader>gb :Git blame<CR>
@@ -275,9 +278,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
-
-" Setup Prettier command
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Mappings for CoCList
 " Show all diagnostics
