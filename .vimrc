@@ -131,13 +131,6 @@ call minpac#add('k-takata/minpac', {'type':'opt'})
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
-" Autoformat
-let g:formatters_javascript = ['prettier']
-let g:formatters_typescript = ['prettier']
-let g:formatters_css = ['prettier']
-let g:formatters_liquid = ['prettier']
-let g:formatters_ruby = ['rubocop']
-
 " SnipMate
 :imap <C-J> <Plug>snipMateNextOrTrigger
 :smap <C-J> <Plug>snipMateNextOrTrigger
