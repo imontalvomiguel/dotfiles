@@ -82,6 +82,8 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " Autoformat
 noremap <leader>f :Autoformat<CR>
+let g:formatdef_google_java_format = '"google-java-format -"'
+let g:formatters_java = ['google_java_format']
 
 ""
 "" Plugins
