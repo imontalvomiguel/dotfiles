@@ -96,7 +96,6 @@ endif
 packadd minpac
 call minpac#init()
 
-call minpac#add('puremourning/vimspector')
 call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('thinca/vim-visualstar')
 call minpac#add('tpope/vim-surround')
@@ -122,9 +121,6 @@ command! PackClean call minpac#clean()
 :imap <C-J> <Plug>snipMateNextOrTrigger
 :smap <C-J> <Plug>snipMateNextOrTrigger
 
-" Vimspector
-let g:vimspector_enable_mappings = 'HUMAN'
-
 " ACK
 cnoreabbrev Ack Ack!
 nnoremap <Leader>F :Ack!<Space>
@@ -145,18 +141,6 @@ else
 endif
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
-
-" for normal mode - the word under the cursor
-nmap <Leader>di <Plug>VimspectorBalloonEval
-" for visual mode, the visually selected text
-xmap <Leader>di <Plug>VimspectorBalloonEval
-
-nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
-nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
-nmap <LocalLeader>B     <Plug>VimspectorBreakpoints
-nmap <LocalLeader>D     <Plug>VimspectorDisassemble
 
 " Fugitive
 nnoremap <silent> <leader>gb :Git blame<CR>
