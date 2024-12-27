@@ -85,6 +85,14 @@ noremap <leader>f :Autoformat<CR>
 let g:formatdef_google_java_format = '"google-java-format -"'
 let g:formatters_java = ['google_java_format']
 
+let g:formatdef_ktfmt = '"ktfmt --kotlinlang-style -"'
+let g:formatters_kotlin = ['ktfmt']
+
+""
+"" File types
+""
+autocmd FileType kotlin setlocal shiftwidth=4 softtabstop=4 tabstop=8
+
 ""
 "" Plugins
 ""
